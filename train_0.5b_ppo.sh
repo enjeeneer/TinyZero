@@ -5,9 +5,9 @@
 
 export N_GPUS=1
 export CUDA_VISIBLE_DEVICES=2
-ray stop --force && ray start --head --include-dashboard=True
-export BASE_MODEL="model/Qwen2.5-0.5B"
-export DATA_DIR="data/countdown"
+ray stop --force && ray start --head --include-dashboard=False
+export BASE_MODEL="/Users/enjeeneer/TinyZero/model/Qwen2.5-0.5"
+export DATA_DIR="/Users/enjeeneer/TinyZero/data/countdown"
 export ROLLOUT_TP_SIZE=1
 export EXPERIMENT_NAME=countdown-qwen2.5-0.5b
 export VLLM_ATTENTION_BACKEND=XFORMERS

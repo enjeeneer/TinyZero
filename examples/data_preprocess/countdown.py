@@ -10,6 +10,7 @@ from typing import List, Tuple
 from tqdm import tqdm
 from verl.utils.hdfs_io import copy, makedirs
 import argparse
+from utils import BASE_DIR
 
 
 def gen_dataset(
@@ -68,7 +69,7 @@ Assistant: Let me solve this step by step.
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--local_dir', default='~/data/countdown')
+    parser.add_argument('--local_dir', default=f'{BASE_DIR}/data/countdown')
     parser.add_argument('--hdfs_dir', default=None)
     parser.add_argument('--num_samples', type=int, default=100000)
     parser.add_argument('--num_operands', type=int, default=6)
